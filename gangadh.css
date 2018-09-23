@@ -1,0 +1,143 @@
+ head {
+     display: block;
+     text-align: center;
+}
+ title.nameHeader {
+     display: block;
+     font-size: 35px;
+     background: #90001F;
+     color: #fff;
+     padding: 2%;
+     font-style: italic;
+}
+ .section_area {
+     display: block;
+     width: 100%;
+}
+ .section_content1 {
+     display: inline-block;
+     width: 69%;
+}
+ .section_content2 {
+     display: inline-block;
+     width: 29%;
+     vertical-align: top;
+     margin-top: 1.5%;
+     margin-left: 1%;
+    /* border-color: red;
+     */
+}
+ p {
+     overflow: auto;
+     word-wrap: break-word;
+     word-break: break-all;
+     font-size: 18px;
+     font-style: oblique;
+     background: #c3f3aa;
+     padding: 3px;
+}
+ .cont_key {
+     display: inline-block;
+     width: 23%;
+}
+ .cont_section {
+     display: block;
+     width: 100%;
+     padding: 1%;
+     background: #90001F;
+     color: white;
+}
+ .cont_value {
+     display: inline-block;
+     width: 71%;
+}
+ .img_Sec {
+     margin-bottom: 10%;
+}
+ .icon_section {
+     width: 100%;
+     padding-top: 4%;
+}
+ .icn_img {
+     display: inline-block;
+     width: 24%;
+}
+ .icn_img_btm{
+     display: inline-block;
+     width: 6%;
+}
+ img.profile_img {
+     width: 300px;
+     padding: 0.5%;
+     border: 3px solid #90001F;
+}
+ h3.banner {
+     background: #006747;
+     color: #fff;
+     padding: 1%;
+}
+ article {
+     background: #fff;
+     color: #444;
+}
+ h2.aboutme {
+     background: #9C3600;
+     color: #fff;
+     width: 112px;
+     padding: 0.5%;
+}
+ li.list-item {
+     padding: 1%;
+     width: 50%;
+}
+ h2.footer {
+     background: #90001F;
+     padding: 1%;
+     text-align: center;
+     color: #fff;
+}
+ p.past-section {
+     font-size: 18px;
+}
+ p.past-section {
+     background: #c3f3aa;
+     color: #444;
+     padding: 6px;
+     font-style: normal;
+     font-style: oblique;
+}
+ p.future-section {
+     background: #c3f3aa;
+     padding: 9px;
+     font-style: oblique;
+}
+ h3.banner_past {
+     background: #006747;
+     padding: 1%;
+     border-radius: 4px;
+     color: #fff;
+}
+ h3.banner_future {
+     background: #006747;
+     padding: 1%;
+     color: white;
+    /* font-style: oblique;
+     */
+}
+ h3.banner.asideh {
+    background: #006747;
+}
+ p.asidep {
+     background: #c3f3aa;
+     padding: 4px;
+}
+ img.img_icon {
+     width: 30px;
+     height: 30px;
+}
+ li {
+     background: #fff;
+}
+ li:nth-child(odd) {
+    background: #f3d9b1;
+}
