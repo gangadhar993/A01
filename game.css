@@ -19,7 +19,7 @@ header, footer, aside{
 
 main {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 33% 33% 33%;
   background-color: #fff;
   color: #444;
   padding: 1em;
@@ -29,7 +29,7 @@ main {
   background-color: #006747;
   color: #fff;
   border-radius: 0.5em;
-  padding: 1em;
+  padding: 2em;
   margin: 0.5em;
   font-size: 1em;
   text-align: center;
@@ -60,4 +60,33 @@ header {
 h2Transparent{
   color:transparent;
   font-size:0;
+}
+
+div#winner-Status {
+  width: 30%;
+  margin: auto;
+  color:#006747;
+  font-size: 30px;
+  text-align: center;
+  border: 1px solid #006747;
+  border-radius: 4px;
+}
+.section:hover{
+  background:#9C3600;
+  ;
+}
+
+.btn-play {
+  background: #9C3600;
+  width: 81px;
+  border: 1px solid #9C3600;
+}
+
+.btn-play:hover{
+  background: #4a2614;
+}
+
+main.main_section {
+  width: 70%;
+  margin: auto;
 }
