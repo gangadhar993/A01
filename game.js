@@ -5,15 +5,15 @@
   var gameStatus = 1;
   $("#winner-Status").hide();
   const cellElements = [
-    document.getElementById('upper-left'),
-    document.getElementById('upper-mid'),
-    document.getElementById('upper-right'),
-    document.getElementById('center-left'),
-    document.getElementById('center-mid'),
-    document.getElementById('center-right'),
-    document.getElementById('lower-left'),
-    document.getElementById('lower-mid'),
-    document.getElementById('lower-right')
+   $("#upper-left")[0],
+   $("#upper-mid")[0],
+   $("#upper-right")[0],
+   $("#center-left")[0],
+   $("#center-mid")[0],
+   $("#center-right")[0],
+   $("#lower-left")[0],
+   $("#lower-mid")[0],
+   $("#lower-right")[0]
   ];
 
   for (let i = 0; i < cellElements.length; i++) {
@@ -150,7 +150,7 @@
   }
 
    function findWinner(player){
-    let gameWinner;
+    let gameWinner = 0;
     if(cellElements[0].innerText == player && cellElements[1].innerText == player &&cellElements[2].innerText== player ){
       gameWinner = 1;
     }
@@ -176,11 +176,27 @@
     else if(cellElements[6].innerText == player && cellElements[4].innerText == player &&cellElements[2].innerText == player){
       gameWinner = 1;
     }
+    let count = 0;
+    for( let i=0;i<cellElements.length;i++){
+        if(cellElements[i].innerText != " " && cellElements[i].innerText) {
+          count += +1;
+        }
+    }
+    if(count == 9 && !gameWinner){
+      gameWinner = 1;
+      player = "Draw";
+    }
     if(gameWinner){
       gameStatus = 0;
-      $("#winner-Status").html("'"+player+"' Wins");
-      $("#winner-Status").show();
-      alert("'"+player+"' Wins")
+      if(player == "Draw"){
+        $("#winner-Status").html("Draw");
+        alert("Draw Game, play again");
+      }
+      else{
+        $("#winner-Status").html("'"+player+"' Wins");
+        alert("'"+player+"' Wins");
+      }
+      $("#winner-Status").show(); 
     }
   }
 

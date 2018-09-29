@@ -33,7 +33,7 @@ main {
   margin: 0.5em;
   font-size: 1em;
   text-align: center;
-  width: 94%;
+  /* width: 94%; */
   /* margin: auto; */
 }
 
@@ -87,6 +87,6 @@ div#winner-Status {
 }
 
 main.main_section {
-  width: 70%;
+  width: 85%;
   margin: auto;
 }

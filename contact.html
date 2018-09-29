@@ -10,40 +10,62 @@
       <link rel="stylesheet" href="gangadhar.css">
       <link rel="stylesheet" href="contact.css">
       <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+      <script src="contact.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
    </head>
    <body>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #006747;">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                  <a class="navbar-brand" href="#">About Me</a>
-                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="Tic-tac.html">Tic-Tac</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">About Me</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Tic-tac.html">Tic-Tac</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-4 offset-xs-4  col-md-6 offset-md-3">
               <div class="contact_section">
                 <div class="contactLabel">Contact Me</div>
                 <div class="contactHelp">Got a question? I'd love to hear from you. Send me a message I will respond as soon. </div>
-              <form  class="form_section">
+              <form class="needs-validation form_section" novalidate>
                   <div class="form-group">
-                    <label for="formGroupExampleInput">Name </label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your Name">
+                    <label for="name">Name </label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your Name" pattern="^[a-zA-Z]+$" required>
+                    <div class="valid-feedback">
+                       Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Please provide a Name
+                      </div>
                   </div>
                   <div class="form-group">
-                    <label for="formGroupExampleInput2">Email</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your Email">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control " id="email" placeholder="Enter your Email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                       </div>
+                       <div class="invalid-feedback">
+                         Please provide a Email
+                       </div>
                   </div>
                   <div class="form-group">
-                      <label for="exampleFormControlTextarea1">Message</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <label for="message">Message</label>
+                      <textarea class="form-control" id="message" rows="3" required></textarea >
+                      <div class="valid-feedback">
+                          Looks good!
+                         </div>
+                         <div class="invalid-feedback">
+                           Please provide a Message
+                         </div>
                     </div>
                  <div class="button_section"> 
                     <button type="submit" class="btn btn-primary btnContact">Submit</button>
@@ -81,6 +103,9 @@
                      </a>
                   </div>
                </div>
+              </div> 
             </div> 
-        </body>
-     </html>
+          </div>  
+        </div>
+  </body>
+</html>
