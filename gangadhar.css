@@ -223,6 +223,7 @@ h2.header_transparent {
 }
 
 img.rounded-circle {
-    width: 350px;
-    height: 349px;
+    width: 90%;
+    min-width: 70%;
+    /* height: 349px; */
 }
