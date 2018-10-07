@@ -227,3 +227,8 @@ img.rounded-circle {
     min-width: 70%;
     /* height: 349px; */
 }
+
+a.nav-link.active {
+    background: #fff;
+    color: #444 !important;
+}
