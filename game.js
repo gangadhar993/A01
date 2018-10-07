@@ -25,8 +25,8 @@
       // add player's X
      
 
-      const isValidMove = await addX(cellElements[i]);
-      if(!gameStatus){
+      const isValidMove = await addMove(cellElements[i],i);
+      /*if(!gameStatus){
         return;
       }
       if (isValidMove) {
@@ -37,7 +37,7 @@
         // pause, then add computer's O
         //await new Promise((resolve) => setTimeout(() => resolve(), 2000));
         await addO(cellElements[j]);
-      }
+      }*/
 
     });
   }
@@ -52,13 +52,13 @@
     gameStatus = 1;
   }
 
-  async function findBestMove(arr) {
+  /*async function findBestMove(arr) {
     for (let n = 0; n < arr.length; n++) {
       if (arr[n].innerHTML == " ") {
         return n;
       }
     }
-  }
+  }*/
   
    function findBestSquare(arr) {
     for (let n = 0; n < arr.length; n++) {
@@ -71,7 +71,7 @@
   function checkBoxElements(arr,cellElements){
     var  resultid;
       for(let i=0;i<arr.length;i++){
-          if (cellElements[arr[i]].innerHTML != " ") {
+          if (cellElements[arr[i]].innerHTML == " ") {
               resultid = arr[i];
           }
           if(resultid){
@@ -84,7 +84,38 @@
       return resultid;
   }
 
-  /*async function findBestMove(cellElements,id) {
+async function addMove(cellElement,i){
+  if (cellElement.innerHTML != " " && cellElement.innerHTML ) {
+    return false;
+  }
+  /*const headingElement = document.createElement("h1");
+  headingElement.appendChild(textNode);*/
+  const textNode = document.createTextNode("X");
+  cellElement.appendChild(textNode);
+  let winner = findWinner("X");
+  if(!gameStatus){
+    return;
+  }
+  if (true) {
+    gameStatus = 1;
+    // choose computer's O
+    const j = await findBestMove(cellElements,i);
+
+    // pause, then add computer's O
+    //await new Promise((resolve) => setTimeout(() => resolve(), 2000));
+    if (cellElements[j].innerHTML != " " && cellElements[j].innerHTML ) { 
+      return; 
+    }
+    /*const headingElement = document.createElement("h1");
+    headingElement.appendChild(textNode);*/
+    const textNode = document.createTextNode("O");
+    cellElements[j].appendChild(textNode);
+    findWinner("O"); 
+    return true;
+  }
+}
+
+  async function findBestMove(cellElements,id) {
     var gameArray = [];
     var boxId;
     if(id == 0){
@@ -124,7 +155,7 @@
       boxId = checkBoxElements(gameArray,cellElements);
     }
     return boxId;
-  }*/
+  }
 
   async function addX(cellElement) {
     if (cellElement.innerHTML != " " && cellElement.innerHTML ) {
@@ -149,7 +180,7 @@
     findWinner("O");
   }
 
-   function findWinner(player){
+   async function findWinner(player){
     let gameWinner = 0;
     if(cellElements[0].innerText == player && cellElements[1].innerText == player &&cellElements[2].innerText== player ){
       gameWinner = 1;
@@ -197,6 +228,7 @@
         alert("'"+player+"' Wins");
       }
       $("#winner-Status").show(); 
+      return true;
     }
   }
 
