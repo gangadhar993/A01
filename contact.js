@@ -11,6 +11,9 @@
           event.stopPropagation();
         }
         form.classList.add('was-validated');   
+        if (form.checkValidity() === true) {
+          alert("Your form submitted successfully");
+        }
       }, false);
     });
   }, false);
